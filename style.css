@@ -1,4 +1,4 @@
-.container, .pages, .name, .video {    
+.container, .pages, .name, .videocontainer{    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +12,30 @@
     margin-bottom: 12px;
 }
 
-.video {
+.video{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.infobox{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 12px;
+}
+
+.videocontainer{
+    gap: 24px;
+}
+
+iframe{
+    margin-left: 24px;
+}
+.description {
+    width: 70%;
+    text-indent: 50px;
+    line-height: 1.5;
 }
