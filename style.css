@@ -39,3 +39,45 @@ iframe{
     text-indent: 50px;
     line-height: 1.5;
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.book {
+    width: calc(50% - 10px);  /* Ensures two books per row with gap */
+    max-width: 256px;  /* Maintains original max width */
+    height: auto;  /* Allows height to adjust proportionally */
+    aspect-ratio: 256 / 400;  /* Maintains original book cover aspect ratio */
+    object-fit: cover;  /* Ensures image covers the entire area while maintaining aspect ratio */
+}
+
+
+.quotescontainer, .articlescontainer {
+    display: flex;
+    flex-direction: column;
+    width: 33.3%;
+    gap: 20px
+}
+
+.readingcontainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+
+}
+
+.bookscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.3%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quote {
+    font-size: 24px;
+}
