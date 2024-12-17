@@ -5,12 +5,7 @@
     justify-content: center;
 }
 
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 12px;
-}
+
 
 .video{
     display: flex;
@@ -81,3 +76,39 @@ iframe{
 .quote {
     font-size: 24px;
 }
+
+.fashioncontainer {
+    display: flex;
+}
+
+.closet, .wishlist {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.closet{
+    border-right: double;
+}
+
+.piece-image {
+    width: 75%;
+    height: auto;
+}
+
+.piece-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.piece {
+    width: 100%;
+    height: auto;
+}
+
+
+
