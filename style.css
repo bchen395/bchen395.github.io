@@ -111,5 +111,8 @@ iframe{
     height: auto;
 }
 
-
-
+.mediadiet {
+    display: flex;
+    flex-direction: column;
+    
+}
