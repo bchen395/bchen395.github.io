@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wellness</title>
+    <title>relax</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,13 +11,58 @@
         <div>Benson</div>
         <div>Chen</div>
     </div>
-    <div class="pages">
-        <a href="/html/relax.html">relax</a>
-        <a href="/html/explore.html">explore</a>
-        <a href="/html/remind/music.html">remind</a>
+    <div class="relax-header">
+        <div class="color-toggle">
+            <button id="light">light</button>
+            <button id="dark">dark</button>
+        </div>
+        <div class="pages">
+            <a href="/html/relax.html">relax</a>
+            <a href="/html/explore.html">explore</a>
+            <a href="/html/remind/music.html">remind</a>
+        </div>
+        <div class="jukebox-toggle">
+            <button>jazz</button>
+            <button>ambi</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="linkscontainer">
+            <div class="link-title">meditations</div>
+            <a href="https://youtu.be/7VaHh9EUcfE?si=5PkZ5CodcAYD9Iu8&t=22">sound</a>
+            <a href="https://youtu.be/XOoFuiLeaPg?si=UCY_DX58cOuK9qhi&t=175">ram chanting</a>
+            <a href="https://youtu.be/FQ1d5rC062c?si=9Yv63B_r-TEZEPz5&t=1227">metta</a>
+            <a href="https://youtu.be/b2RhXCugEW4?si=1ZjvRije3T05S7LF">yoga nidra</a>
+        </div>
+        <div class="relaxcontainer">
+            <div class="video-container">
+                <iframe width="585" height="330" src="https://www.youtube.com/embed/qe3AcjbJzHo?autoplay=1&mute=1" 
+                title="The Fallingwater Fireplace" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+            <form class="journal-form">
+                <p><label>journal</label></p>
+                <textarea rows="12" cols="70"></textarea>
+                <br>
+                <input type="button" value="burn">
+            </form>
+        </div> 
+        <div class="linkscontainer">
+            <div class="link-title">jukebox</div>
+            <a href="https://open.spotify.com/album/6zwjQ6buUEcF3E9IGTJXtP?si=43Zhgo47Q3GvMnBSM_9oFA">the lemon of pink - the books</a>
+            <a href="https://open.spotify.com/album/5OQ0N0i26LsukbGcYeSa65?si=3DlK-1e5RD-DmhL-eps88Q">blue angel sparkling silver - quiet light</a>
+            <a href="https://open.spotify.com/album/71q46YDkSq6uXS5WJy4WMk?si=baDa9p_STxqBw14VDEs3lg">instrumentals - adrianne lenker</a>
+            <a href="https://open.spotify.com/album/2onXlqUvme77BeIcMIOz3M?si=EuMF1cgISSWdVpW0X_KaBA">the melody at night, with you - keith jarrett</a>
+            <a href="https://open.spotify.com/album/2vgc3dNLfceYv2k1vxK2zA?si=zR4tiNQETf-KCDmVbWba3w">music for nine post cards - hiroshi yoshimura</a>
+            <a href="https://open.spotify.com/album/0f6sO2bVbCxrbMUE7Yy1p4?si=2QxUzwkXQ4638rTU82KYFQ">the silver collection - oscar peterson</a>
+            <a href="https://open.spotify.com/album/2onXlqUvme77BeIcMIOz3M?si=EuMF1cgISSWdVpW0X_KaBA">the melody at night, with you - keith jarrett</a>
+
+        </div> 
     </div>
 </body>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 
 </html>
