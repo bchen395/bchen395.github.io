@@ -111,19 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
   
-// Add some basic styles for active button state
-const style = document.createElement('style');
-style.textContent = `
-    .jukebox-toggle button.active {
-    background-color: #333;
-    color: white;
-}
-    .video-toggle button.active {
-    background-color: #333;
-    color: white;
-}
-`;
-document.head.appendChild(style);
+
 
 function eraseText() {
     document.getElementById("output").value = "";
@@ -136,3 +124,64 @@ document.addEventListener('DOMContentLoaded', () => {
         eraseText();
       });
 });
+
+
+const popup = document.getElementById('journal-form');
+const popupHeader = document.getElementById('popupHeader');
+let isDragging = false;
+let currentX;
+let currentY;
+let initialX;
+let initialY;
+let xOffset = 0;
+let yOffset = 0;
+
+function togglePopup() {
+    if (popup.style.display === 'block') {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'block';
+        // Center the popup only when showing it
+        if (!xOffset && !yOffset) {  // Only center if it hasn't been dragged
+            popup.style.left = (window.innerWidth / 2 - popup.offsetWidth / 2) + 'px';
+            popup.style.top = (window.innerHeight / 2 - popup.offsetHeight / 2) + 'px';
+        }
+    }
+}
+
+popupHeader.addEventListener('mousedown', dragStart);
+document.addEventListener('mousemove', drag);
+document.addEventListener('mouseup', dragEnd);
+
+        function dragStart(e) {
+            initialX = e.clientX - xOffset;
+            initialY = e.clientY - yOffset;
+
+            if (e.target === popupHeader) {
+                isDragging = true;
+            }
+        }
+
+function drag(e) {
+    if (isDragging) {
+        e.preventDefault();
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, popup);
+    }
+}
+
+function setTranslate(xPos, yPos, el) {
+    el.style.left = xPos + 'px';
+    el.style.top = yPos + 'px';
+}
+
+function dragEnd() {
+    initialX = currentX;
+    initialY = currentY;
+    isDragging = false;
+}

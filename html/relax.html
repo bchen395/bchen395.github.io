@@ -44,9 +44,10 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </div>
-            <form class="journal-form">
-                <p><label>journal</label></p>
-                <textarea id="output" draggable="true" rows="12" cols="70"></textarea>
+            <button class="popup" onclick="togglePopup()">journal</button>
+            <form class="journal-form" id="journal-form">
+                <div id="popupHeader" class="popup-header">journal</div>
+                <textarea id="output" rows="12" cols="70"></textarea>
                 <br>
                 <input type="button" value="burn">
             </form>
