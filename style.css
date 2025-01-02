@@ -160,6 +160,8 @@ button, .journal-form input {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .linkscontainer .link-title {
