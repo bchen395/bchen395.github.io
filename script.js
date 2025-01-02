@@ -69,7 +69,7 @@ function updateJukeboxLinks(genre) {
     const jukeboxContainer = document.querySelectorAll('.linkscontainer')[1];
 
     // Clear existing links except the title
-    while (jukeboxContainer.childNodes.length > 1) {
+    while (jukeboxContainer.childNodes.length > 2) {
         jukeboxContainer.removeChild(jukeboxContainer.lastChild);
     }
 

@@ -1,11 +1,17 @@
 body {
     font-family: 'Times New Roman', Times, serif;
+    background-color: #fff3e3;
 }
 .container, .pages, .name, .videocontainer{    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.pages a, .navigation a{
+    color: #333;
+    text-decoration: none;
 }
 
 .video{
@@ -123,12 +129,10 @@ body {
     margin-left: 6.66px;
 }
 
-
-
-.dark-background {
-    background-color: #121212;
-    color: white;
+.video-toggle button, .jukebox-toggle button {
+    background-color: #ffebd9;
 }
+
 
 
 .content {
@@ -142,7 +146,7 @@ body {
 .linkscontainer {
     width: 100px;
     height: 80vh;
-    background-color: #fcf4ed;
+    background-color: #ffebd9;
     padding: 20px;
     display: flex;
     flex-direction: column;
