@@ -238,3 +238,10 @@ button:hover, input:hover {
 }
 
 
+/* EXPLORE PAGE */
+
+.explore-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
