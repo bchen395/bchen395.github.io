@@ -49,20 +49,14 @@ body {
     margin-bottom: 12px;
 }
 
-.book {
-    width: calc(50% - 10px);  /* Ensures two books per row with gap */
-    max-width: 256px;  /* Maintains original max width */
-    height: auto;  /* Allows height to adjust proportionally */
-    aspect-ratio: 256 / 400;  /* Maintains original book cover aspect ratio */
-    object-fit: cover;  /* Ensures image covers the entire area while maintaining aspect ratio */
-}
-
 
 .quotescontainer, .articlescontainer {
     display: flex;
     flex-direction: column;
     width: 33.3%;
-    gap: 20px
+    gap: 20px;
+    height: 80vh;
+    overflow: scroll;
 }
 
 .readingcontainer {
@@ -72,13 +66,20 @@ body {
 
 }
 
-.bookscontainer {
+.sc-container {
     display: flex;
-    flex-wrap: wrap;
     width: 33.3%;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    height: 80vh;
+    overflow: scroll;
 }
+
+.shangchi-container img{
+    max-width: 100%;
+    object-fit: contain;
+}
+
 
 .quote {
     font-size: 24px;
@@ -162,6 +163,8 @@ button, .journal-form input {
     flex-direction: column;
     overflow: scroll;
     scrollbar-width: none;
+    border: solid;
+    border-width: 1px;
 }
 
 .linkscontainer .link-title {
@@ -169,7 +172,7 @@ button, .journal-form input {
     text-align: center;
 }
 
-.linkscontainer a {
+.linkscontainer a, .articlescontainer a {
     display: block;
     padding: 10px 0;
     color: #333;
@@ -242,6 +245,6 @@ button:hover, input:hover {
 
 .explore-container {
     display: flex;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-evenly;
+    margin-top: 12px;
 }
