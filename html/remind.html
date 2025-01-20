@@ -17,109 +17,21 @@
         <a href="/html/remind.html"><b>remind</b></a>
     </div>
     <div class="remind-container">
-        <div class="readings-container">
-            <div class="content-piece">
-                <div class="content-image">
-                    <img src="../../images/shangchi.jpg" alt="Shangchi Quote">
-                </div>
-                <div class="caption">Caption about family</div>
-            </div>
-            <div class="content-piece">
-                <div class="content-image">
-                    <img src="../../images/commandements.jpg" alt="Tess's Ten Commandments">
-                </div>
-                <div class="caption">Tess's Ten Commandments</div>
-            </div>
-            <div class="articles-container">
-                <div class="content-piece">
-                    <a href="https://www.vogue.com/article/joan-didion-self-respect-essay-1961">On Self Respect - Joan Didion</a>
-                </div>
-                <div class="content-piece">
-                    <a href="https://pitchfork.com/features/resonant-frequency/6694-resonant-frequency-50/">The Memory of Our Betters - Mark Richardson</a>
-                </div>
-                <div class="content-piece">
-                    <a href="https://poets.org/poem/having-coke-you">Having a Coke with You - Frank O'Hara</a>
-                </div>
-                <div class="content-piece">
-                    <a href="https://www.are.na/alex-singh/a-catalogue-of-simple-pleasures">A Catalogue of Simple Pleasures - Alex Singh</a>
-                </div>
-            </div>
+        <div class="column">
+            <div class="content reading" id="reading-content"></div>
+            <button onclick="updateReading()">new reading</button>
         </div>
-        <div class="videos-container">
-            <div class="content-piece">
-                <div class="content-image">
-                    <iframe width="380" height="280" 
-                    src="https://www.youtube.com/embed/o3D8Ri84hmw" 
-                    title="Keith Jarrett - I Loves You Porgy" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="content-piece">
-                <div class="content-image">
-                    <iframe width="380" height="280" 
-                    src="https://www.youtube.com/embed/V4rl6NkVDCk" 
-                    title="Dijon - Drunk Live @ The New Parish" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-                
-            </div>
-            <div class="content-piece">
-                <div class="content-image">
-                    <iframe width="380" height="280"  
-                    src="https://www.youtube.com/embed/x5Swa9CYgRk" 
-                    title="Bon Iver - For Emma, Forever Ago | A Take Away Show" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe> 
-                </div>
-                
-            </div>
+        <div class="column">
+            <div class="content video" id="video-content"></div>
+            <button onclick="updateRemindVideo()">new video</button>
         </div>
-        <div class="quotescontainer">
-            <div class="quote-item">
-                <div class="quote">When you realize there is nothing lacking, the whole world belongs to you</div>
-                <div class="quote-author">Lao Tzu (Anya Taylor Joy)</div>
-            </div>
-            <div class="quote-item">
-                <div class="quote">The choice is not what brings happiness, it's the way we experience the choice.</div>
-                <div class="quote-author">Dr. K</div>
-            </div>
-            <div class="quote-item">
-                <div class="quote">Mark, we're gonna wear our souls, Mark. Mark, we're gonna wear our souls like a skin.</div>
-                <div class="quote-author">Fraser Wilson (from "We Are Who We Are") </div>
-            </div>
-            <div class="quote-item">
-                <div class="quote">Embrace it with both arms, hug it, love it, and above all become passionate about it. Lukewarm is no Good.</div>
-                <div class="quote-author">Roald Dahl</div>
-                </div>
-                <div class="quote-item">
-                    <div class="quote">Yeaa hes Not shredded as fuck with a demure waist and smile that could light up the whole room bro</div>
-                    <div class="quote-author">alex @midsmoker34</div>
-                </div>
-                <div class="quote-item">
-                    <div class="quote">“to have none. not to be tied. to be free & kindly with myself. sometimes to read, sometimes not to read. to go out, yes—but stay at home in spite of being asked. as for clothes, i think to buy good ones”</div>
-                    <div class="quote-author">Virginia Woolf's 1931 New Years Resolutions</div>
-                </div>
-                <div class="quote-item">
-                    <div class="quote">How we spend our days is, of course, how we spend our lives.</div>
-                    <div class="quote-author">Annie Dillard</div>
-                </div>
-                <div class="quote-item">
-                    <div class="quote">Lean buyin the gucci store its like breathing air its nothing it means nothing</div>
-                    <div class="quote-author">Bladee</div>
-                </div>
-                <div class="quote-item">
-                    <div class="quote">Yeaa hes Not shredded as fuck with a demure waist and smile that could light up the whole room bro</div>
-                    <div class="quote-author">alex @midsmoker34</div>
-                </div>
+        <div class="column">
+            <div class="content quote" id="quote-content"></div>
+            <button onclick="updateQuote()">new quote</button>
         </div>
     </div>
 </body>
 
-<script src="../script.js"></script>
+<script src="../remindScript.js"></script>
 
 </html>

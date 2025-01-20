@@ -1,10 +1,11 @@
+// RELAX SECTION
 const videoLinks = {
     fire: "https://www.youtube.com/embed/qe3AcjbJzHo?autoplay=1&mute=1",
     bike: "https://www.youtube.com/embed/ZlUevdMLbhs?autoplay=1&mute=1",
     lawn: "https://www.youtube.com/embed/TyqmDNXyrAk?autoplay=1&mute=1"
 };
 
-function updateVideo(video) {
+function updateRelaxVideo(video) {
     const iframe = document.querySelector(".video-container iframe");
     iframe.src = videoLinks[video];
     console.log(videoLinks[video]);
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update the video
         const video = e.target.textContent.toLowerCase();
-        updateVideo(video);
+        updateRelaxVideo(video);
 
         // Update delete button text
         const deleteButton = document.querySelector('.journal-form input');
@@ -42,12 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const fireButton = document.querySelector('.video-toggle button');
   if (fireButton) {
     fireButton.classList.add('active');
-    updateVideo('fire');
+    updateRelaxVideo('fire');
   }
 });
-
-
-
 
 const albums = {
     jazz: [
@@ -128,8 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     updateJukeboxLinks('jazz');
   }
 });
-  
-
 
 function eraseText() {
     document.getElementById("output").value = "";
@@ -171,14 +167,13 @@ popupHeader.addEventListener('mousedown', dragStart);
 document.addEventListener('mousemove', drag);
 document.addEventListener('mouseup', dragEnd);
 
-        function dragStart(e) {
-            initialX = e.clientX - xOffset;
-            initialY = e.clientY - yOffset;
-
-            if (e.target === popupHeader) {
-                isDragging = true;
-            }
-        }
+function dragStart(e) {
+    initialX = e.clientX - xOffset;
+    initialY = e.clientY - yOffset;
+    if (e.target === popupHeader) {
+        isDragging = true;
+    }
+}
 
 function drag(e) {
     if (isDragging) {
@@ -204,4 +199,4 @@ function dragEnd() {
     isDragging = false;
 }
 
-
+// END OF RELAX SECTION
