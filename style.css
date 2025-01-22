@@ -116,22 +116,26 @@ body {
 
 .column button {
     position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    width: calc(100% - 3rem);
+    bottom: 2rem;
+    left: 5rem;
+    right: 2rem;
+    width: calc(100% - 10rem);
+    padding: 16px;
 }
 
 /* RELAX PAGE */
 
 .relax-header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
+.jukebox-toggle {
+    margin-right: 16px;
+}
+
 .video-toggle {
-    margin-left: 6.66px;
+    margin-left: 16px;
 }
 
 .jukebox-toggle button.active {
@@ -141,10 +145,12 @@ body {
     background-color: #fed8b7;
 }
 
-button, .journal-form input {
+.jukebox-toggle button, .video-toggle button {
     background-color: #ffebd9;
     cursor: pointer;
     border-radius: 4px;
+    width: 42px;
+    text-align: center;
 }
 .journal-form input {
     margin: 5px;
@@ -157,6 +163,15 @@ button, .journal-form input {
     min-height: 100vh;
     position: relative;
 }
+
+#jukebox-container {
+    margin-right: 12px;
+}
+
+#meditations-container {
+    margin-left: 12px;
+}
+
 
 .linkscontainer {
     width: 100px;
