@@ -52,7 +52,15 @@ const videos = [
     {
         title: 'Bon Iver - For Emma, Forever Ago | A Take Away Show',
         embedId: 'x5Swa9CYgRk'
-    }
+    },
+    {
+        title: 'John\'s Review of Auld Lang Syne',
+        embedId: 'Wgh8Gfs2S7M'
+    },
+    {
+        title: 'HEAVEN TO ME',
+        embedId: 'wm_hfvgakcM'
+    },
 ];
 
 const quotes = [
