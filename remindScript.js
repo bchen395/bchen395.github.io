@@ -14,6 +14,18 @@ const readings = [
         text: 'During the release of "Shangchi", 88rising wrote this caption. It\'s cheesy. It\'s lovely'
     },
     {
+        type: 'image',
+        imageUrl: '../../images/chucko.jpeg',
+        title: 'David Lynch Interview',
+        text: 'Chucko, Buster, Pete, Bob, and Dan.'
+    },
+    {
+        type: 'image',
+        imageUrl: '../../images/ArtofLiving.jpeg',
+        title: 'Carl Jung',
+        text: 'Something to consider.'
+    },
+    {
         type: 'link',
         url: 'https://www.vogue.com/article/joan-didion-self-respect-essay-1961',
         title: 'On Self Respect - Joan Didion',
@@ -61,6 +73,42 @@ const videos = [
         title: 'HEAVEN TO ME',
         embedId: 'wm_hfvgakcM'
     },
+    {
+        title: 'Dijon - Absolutely (Film)',
+        embedId: 'FEkOYs6aWIg'
+    },
+    {
+        title: 'Ten Feet Tall (Official Video)',
+        embedId: 'JmQ9Ot0C344'
+    },
+    {
+        title: 'ADORE',
+        embedId: '_f4WBBiF0GE'
+    },
+    {
+        title: 'Frank Ocean \‘Nights\’ Live - FYF Fest 2017',
+        embedId: 'jFd37iX66Fo'
+    },
+    {
+        title: 'Slugdeline',
+        embedId: 'heU-RDwTFWI'
+    },
+    {
+        title: 'Lawrence - The Weather (Acoustic & Gospel Reprise)',
+        embedId: 'M9TYHOARDFI'
+    },
+    {
+        title: 'James Ivy - Yearbook (feat. Instupendo & Harry Teardrop)',
+        embedId: 'PAgXoDeuImU'
+    },
+    {
+        title: 'The Voice S3 Terry McDermott, Melanie, Nicholas, Cody - "Rhythm of Love"',
+        embedId: '38p1NeV0BAs'
+    },
+    {
+        title: 'Elizabeth and Aidan Carberry’s first dance',
+        embedId: 'dRNren7ziBY'
+    },
 ];
 
 const quotes = [
@@ -98,14 +146,32 @@ const quotes = [
     }
 ];
 
-// Helper function to get random item from array
-function getRandomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
+// Add state to track the current position in each shuffled array
+let readingOrder = [];
+let videoOrder = [];
+let quoteOrder = [];
+
+// Shuffle algorithm
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Get next item from an ordered array, reshuffling when necessary
+function getNextItem(array, orderArray) {
+    if (orderArray.length === 0) {
+        orderArray.push(...shuffleArray(array.map((_, index) => index)));
+    }
+    return array[orderArray.shift()];
 }
 
 // Update functions for each content type
 function updateReading() {
-    const reading = getRandomItem(readings);
+    const reading = getNextItem(readings, readingOrder);
     const content = document.getElementById('reading-content');
     
     if (reading.type === 'link') {
@@ -127,7 +193,7 @@ function updateReading() {
 }
 
 function updateRemindVideo() {
-    const video = getRandomItem(videos);
+    const video = getNextItem(videos, videoOrder);
     document.getElementById('video-content').innerHTML = `
         <iframe 
             src="https://www.youtube.com/embed/${video.embedId}" 
@@ -141,7 +207,7 @@ function updateRemindVideo() {
 }
 
 function updateQuote() {
-    const quote = getRandomItem(quotes);
+    const quote = getNextItem(quotes, quoteOrder);
     document.getElementById('quote-content').innerHTML = `
         <div class="quote">${quote.text}</div>
         <div class="quote-author">— ${quote.author}</div>
