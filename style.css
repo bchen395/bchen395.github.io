@@ -1,5 +1,5 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: et-book, serif;
     background-color: #fff3e3;
 }
 .container, .pages, .name{    
@@ -9,7 +9,7 @@ body {
     justify-content: center;
 }
 
-.pages a, .navigation a{
+.pages a, .navigation a, .name a{
     color: #333;
     text-decoration: none;
 }
@@ -19,6 +19,27 @@ body {
     justify-content: center;
     gap: 5px;
     margin-bottom: 12px;
+}
+
+.bio {
+    width: 33%;
+}
+
+.tech-list{
+    list-style-type: none;
+}
+
+.tech-list li{
+    margin: 10px 0;
+}
+
+.bio p {
+    font-size: 1.1rem;
+}
+
+.bio a {
+    text-decoration: none;
+    color: black;
 }
 
 /* REMIND */
@@ -162,7 +183,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     position: relative;
 }
 
@@ -250,6 +271,8 @@ body {
     margin: 0 10px;
     resize: both;
     border: 1px solid #ddd;
+    background: #fff3e3;
+
 }
 
 .popup{
@@ -259,8 +282,10 @@ body {
     cursor: pointer;
 }
 
-button:hover, input:hover {
-    background: #fed8b7;;
+button:hover, input {
+    background: #ffebd9;
+    cursor: pointer;
+
 }
 
 
