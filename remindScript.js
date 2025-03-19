@@ -49,6 +49,18 @@ const readings = [
         title: 'A Catalogue of Simple Pleasures - Alex Singh',
         text: 'Plenty of good reminders.'
     },
+    {
+        type: 'link',
+        url: 'https://theface.com/music/clairo-charm-vol-4-issue-22-interview-jack-antonoff',
+        title: 'How Clairo found herself',
+        text: 'The life of an artist. Also, the life of having an NYC apartment and upstate house.'
+    },
+    {
+        type: 'link',
+        url: 'https://pitchfork.com/features/overtones/how-frank-ocean-triumphs-without-even-trying/',
+        title: 'How Frank Ocean Triumphs Without Even Trying',
+        text: 'I love this breakdown of post Blonde tracks. The songs are among the best.'
+    },
 
 ];
 
