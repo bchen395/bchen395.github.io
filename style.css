@@ -199,6 +199,7 @@ body {
 .linkscontainer {
     width: 100px;
     height: 80vh;
+    max-height: 100vh;
     background-color: #ffebd9;
     padding: 20px;
     display: flex;
